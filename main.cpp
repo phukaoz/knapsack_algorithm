@@ -29,9 +29,9 @@ int main(int argc, char* argv[])
 
     std::vector<std::shared_ptr<algorithm>> algorithms = {
         std::make_shared<top_down>(),
-        std::make_shared<genetic_algorithm>(),
+        std::make_shared<genetic_algorithm>(300, 1200, 0.005),
         std::make_shared<bottom_up>(),
-        std::make_shared<brute_force>()
+        //std::make_shared<brute_force>(),
     };
 
     for(auto algo : algorithms)
